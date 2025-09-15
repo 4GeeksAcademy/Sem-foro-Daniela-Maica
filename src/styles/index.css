@@ -3,38 +3,35 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 body {
     width: 100%;
     display: grid;
     min-height: 100vh;
     place-items: center;
-    background-color: #f2f2f2;
+    background-color: white;
 }
-
+button{
+    margin-top: 500px;
+}
 .main-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0px;
 }
-
-.container {
+.container-trafficlight{
     padding: 0;
     display: grid;
     place-items: center;
     position: relative;
 }
-
-.container-left {
+.container-triangle-left {
     height: 500px;
 }
-
-.container-right {
+.container-triangle-right {
     height: 500px;
 }
-
-.rectangle {
+.rectangle-circular-lights {
     display: grid;
     place-items: center;
     width: 190px;
@@ -45,8 +42,7 @@ body {
     border: 5px solid rgba(0, 0, 0, 0.795);
 
 }
-
-.lights-circle {
+.lights-circle-red {
     width: 126px;
     height: 125px;
     display: block;
@@ -55,8 +51,7 @@ body {
     background-color: #303030;
     position: relative;
 }
-
-.lights-circle::after {
+.lights-circle-red::after {
     content: '';
     position: absolute;
     width: 116px;
@@ -65,9 +60,43 @@ body {
     border-right: 4px solid rgb(255, 255, 255, 0.6);
     border-top: 30px solid #181818f8;
 }
-
-
-.circle {
+.lights-circle-yellow {
+    width: 126px;
+    height: 125px;
+    display: block;
+    border-radius: 50%;
+    border: 5px solid rgba(0, 0, 0, 0.705);
+    background-color: #303030;
+    position: relative;
+}
+.lights-circle-yellow::after {
+    content: '';
+    position: absolute;
+    width: 116px;
+    height: 114px;
+    border-radius: 50%;
+    border-right: 4px solid rgb(255, 255, 255, 0.6);
+    border-top: 30px solid #181818f8;
+}
+.lights-circle-green {
+    width: 126px;
+    height: 125px;
+    display: block;
+    border-radius: 50%;
+    border: 5px solid rgba(0, 0, 0, 0.705);
+    background-color: #303030;
+    position: relative;
+}
+.lights-circle-green::after {
+    content: '';
+    position: absolute;
+    width: 116px;
+    height: 114px;
+    border-radius: 50%;
+    border-right: 4px solid rgb(255, 255, 255, 0.6);
+    border-top: 30px solid #181818f8;
+}
+.circle-top {
     top: -20px;
     left: 50%;
     z-index: 10;
@@ -79,8 +108,7 @@ body {
     background-color: #181818;
     border: 5px solid rgba(0, 0, 0, 0.541);
 }
-
-.stick {
+.stick-top {
     z-index: 1;
     width: 50px;
     height: 50px;
@@ -89,22 +117,19 @@ body {
     border-right: 5px solid rgba(0, 0, 0, 0.541);
     border-left: 5px solid rgba(0, 0, 0, 0.541);
 }
-
 .stick-bottom {
     width: 50px;
-    height: 150px;
+    height: 120px;
     background: #181818f8;
     z-index: 1;
     border-right: 5px solid rgba(0, 0, 0, 0.541);
     border-left: 5px solid rgba(0, 0, 0, 0.541);
 
 }
-
 .triangle {
     width: 0;
     height: 0;
 }
-
 .triangle-right {
     margin-bottom: 50px;
     border-left: 100px solid #181818f8;
@@ -112,11 +137,22 @@ body {
     border-bottom: 100px solid transparent;
     border-top-right-radius: 20px;
 }
-
 .triangle-left {
     margin-bottom: 50px;
     border-right: 100px solid #181818f8;
     border-top: 0px solid transparent;
     border-bottom: 100px solid transparent;
     border-top-left-radius: 20px;
+}
+.red{
+    background-color: red;
+    box-shadow: 1px 1px 112px 29px rgba(255,0,0,1);
+}
+.yellow{
+    background-color: yellow;
+    box-shadow: 1px 1px 112px 29px rgba(255,255,0,1);
+}
+.green{
+    background-color: #5bda25;
+    box-shadow: 1px 1px 112px 29px rgba(91,218,37,1);
 }
